@@ -1,1 +1,34 @@
 <h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Discount Calculator</h1>
+
+    <label>Original Price:</label>
+    <input type="number" id="price">
+
+    <label>Discount (%):</label>
+    <input type="number" id="discount">
+
+    <button onclick="calculateDiscount()">Calculate</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function calculateDiscount() {
+            let price = document.getElementById("price").value;
+            let discount = document.getElementById("discount").value;
+            let discountedPrice = price - (price * (discount / 100));
+            document.getElementById("result").innerHTML = "Final Price: ₱" + discountedPrice;
+        }
+    </script>
+
+</body>
+</html>
